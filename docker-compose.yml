@@ -1,0 +1,10 @@
+webdav:
+  container_name: webdav
+  image: bishof/go-webdav
+  ports:
+    - "8080:80"
+  volumes:
+    - ~/data/webdav/log:/webdav/log
+    - ~/data/webdav/root:/webdav/root
+  environment:
+    - WEBDAV_LOGLEVEL=ALL
